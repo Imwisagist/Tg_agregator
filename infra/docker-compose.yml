@@ -1,0 +1,34 @@
+version: '3.8'
+services:
+
+  db:
+   image: mongo:latest
+   ports:
+     - "27017:27017"
+   restart: always
+   volumes:
+     - mongo_data:/data/db
+     - mongo_config:/data/configdb
+   container_name: mongo_db
+
+  backend:
+    build: ../backend
+    ports:
+      - "8010:8010"
+    depends_on:
+      - db
+    restart: always
+    container_name: fastapi_backend
+
+  bot:
+    build: ../bot
+    depends_on:
+      - backend
+    env_file:
+      - .env
+    restart: always
+    container_name: aiogram_bot
+
+volumes:
+  mongo_data:
+  mongo_config:

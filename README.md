@@ -1,26 +1,20 @@
 # Test_for_Reliable_Loyal_Technologies
-### Clone project and enter in the folder:
+### Clone project and enter in the infra folder:
 ```bash
-git clone https://github.com/Imwisagist/Test_for_Reliable_Loyal_Technologies.git && cd Test_for_Reliable_Loyal_Technologies
+git clone https://github.com/Imwisagist/Test_for_Reliable_Loyal_Technologies.git && cd Test_for_Reliable_Loyal_Technologies/infra
 ```
-### Create a .env file and enter the token of your telegram bot into it:
+### Create a .env file in infra folder and enter the token of your telegram bot into it:
 ```bash
 nano .env
-TELEGRAM_TOKEN = <TOKEN>
+TELEGRAM_BOT_TOKEN = <TOKEN>
 ```
-#### Import the collection from the sample_collection.json file to MongoDB:
-#### Name the collection "salary", and name the database "task"
-### Install poetry:
+### Run docker-compose:
 ```bash
-pip install poetry
+docker-compose up -d
 ```
-### Install dependencies:
+### Fill in the database:
 ```bash
-poetry install
-```
-### Run the bot script:
-```bash
-poetry run python bot.py
+winpty docker exec -it fastapi_backend bash -c "poetry run python load_data.py"
 ```
 ### Go to the Telegram, write to your bot and enjoy!)
 ### How it looks:

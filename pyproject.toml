@@ -9,6 +9,8 @@ packages = [{include = "test_for_reliable_loyal_technologies"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 pymongo = "^4.3.3"
+aiogram = "^2.25.1"
+python-dotenv = "^1.0.0"
 
 
 [build-system]

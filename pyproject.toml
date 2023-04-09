@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "test-for-reliable-loyal-technologies"
+version = "0.1.0"
+description = ""
+authors = ["Дмитрий Спиряев <imwisagist@yandex.ru>"]
+readme = "README.md"
+packages = [{include = "test_for_reliable_loyal_technologies"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pymongo = "^4.3.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,4 +1,4 @@
-# Test_for_Reliable_Loyal_Technologies
+# Tg_agregator
 ### Clone project and enter in the infra folder:
 ```bash
 git clone https://github.com/Imwisagist/Test_for_Reliable_Loyal_Technologies.git && cd Test_for_Reliable_Loyal_Technologies/infra
